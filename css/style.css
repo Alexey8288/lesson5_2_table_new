@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    /* нижняя граница */
+    margin-bottom: 10px;
+}
+
+.container {
+    /* элементы становятся в один ряд, в строку */
+    display: flex;
+    /* ставит отступы по бокам*/
+    gap: 10px;
+    /* нижняя граница */
+    margin-bottom: 10px;
+    /* высота по высоте экрана */
+    height: calc(100vh - 240px);
+}
+
+.main {
+    /* 1-й способ */
+    /* width: calc(100% - 200px - 300px); */
+    /* 2-й способ */
+    /* мин ширина */
+    flex-basis: 100px;
+    /* занимает всю остальную ширину */
+    flex-grow: 1;
+    border: 2px solid black;
+    background-color: blueviolet;
+}
+
+.left {
+    /* 1-й способ */
+    /* width: 300px; */
+    /* 2-й способ */
+    flex-basis: 300px;
+    /* 3-й способ */
+    /* flex-grow: 2; */
+    background-color: burlywood;
+    border: 2px solid black;
+    /* меняет порядок элементов, ставит его влево */
+    order: -1;
+}
+
+.right {
+    /* 1-й способ */
+    /* width: 200px; */
+    /* 2-й способ */
+    flex-basis: 200px;
+    /* 3-й способ */
+    /* показывает какую часть ширины будет занимать */
+    /* flex-grow: 4; */
+    background-color: chartreuse;
+    border: 2px solid black;
+}
+
+.footer {
+    height: 100px;
+    background-color: blue;
+    border: 2px solid black;
+}
